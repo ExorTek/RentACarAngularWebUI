@@ -1,0 +1,27 @@
+<div *ngIf="dataLoaded==false || brands.length <= 0 ">
+  <app-loading></app-loading>
+</div>
+
+<div *ngIf="dataLoaded==true && brands.length <= 0" class="alert alert-danger alert-dismissible" role="alert" id="myAlert">
+  <button type="button" class="close">&times;</button>
+  <strong>Başarısız</strong> Şuanda Marka Bulunamadı
+</div>
+
+
+
+<div *ngIf="dataLoaded==true && brands.length > 0" class="container">
+  <table class="table table-info">
+    <thead>
+    <tr>
+      <th scope="col">Marka ID</th>
+      <th scope="col">Marka Adı</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let brand of brands">
+      <td>{{brand.brandId}}</td>
+      <td>{{brand.brandName}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
