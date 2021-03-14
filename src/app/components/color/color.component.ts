@@ -11,7 +11,7 @@ export class ColorComponent implements OnInit {
 
   colors: Color[] = [];
   dataLoaded = false;
-
+  error = '';
   constructor(private colorService: ColorService) {
   }
 
@@ -23,6 +23,8 @@ export class ColorComponent implements OnInit {
     this.colorService.getColors().subscribe(response => {
       this.colors = response.data;
       this.dataLoaded = true;
+    }, error=>{
+      this.error = error.name;
     })
   }
 

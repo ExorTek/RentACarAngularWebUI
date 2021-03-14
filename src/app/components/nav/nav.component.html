@@ -5,19 +5,20 @@
   <div class="container">
     <div class="menu">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li><a routerLink="/" class="nav-link">ANASAYFA</a></li>
-        <li><a routerLink="/brands" class="nav-link">MARKALAR</a></li>
-        <li><a routerLink="/cars" class="nav-link">ARABALAR</a></li>
-        <li><a routerLink="/colors" class="nav-link">RENKLER</a></li>
-        <li><a routerLink="/customers" class="nav-link">MÜŞTERİLER</a></li>
-        <li><a routerLink="/rentals" class="nav-link">KİRALANANLAR</a></li>
+        <li><a routerLink="/" data-hover="ANASAYFA" class="nav-link">ANASAYFA</a></li>
+        <li><a routerLink="/brands" data-hover="MARKALAR" class="nav-link">MARKALAR</a></li>
+        <li><a routerLink="/cars" data-hover="ARABALAR" class="nav-link">ARABALAR</a></li>
+        <li><a routerLink="/colors" data-hover="RENKLER" class="nav-link">RENKLER</a></li>
+        <li><a routerLink="/customers" data-hover="MÜŞTERİLER" class="nav-link">MÜŞTERİLER</a></li>
+        <li><a routerLink="/rentals" data-hover="KİRALANANLAR" class="nav-link">KİRALANANLAR</a></li>
       </ul>
     </div>
   </div>
   <div class="icons">
     <ul>
-      <li> <a href="https://www.instagram.com/emircan.dalmn/"><img src="assets/images/instagram.svg"></a></li>
-      <li> <a href="https://github.com/Kontorta16"><img src="assets/images/github.svg"></a></li>
+      <li> <a target="_blank" href="https://github.com/ExorTek"> <fa-icon [icon]="githubIcon" class="fa-2x"></fa-icon> </a></li>
+      <li> <a target="_blank" href="https://www.instagram.com/mmetdemirel/"><fa-icon [icon]="instagramIcon"  class="fa-2x"></fa-icon></a></li>
+<!--      <li> <a routerLink="/login"><img src="assets/images/login.svg"></a></li>-->
     </ul>
   </div>
 </nav>

@@ -18,11 +18,15 @@ import {ColorComponent} from './components/color/color.component';
 import {CustomerComponent} from './components/customer/customer.component';
 import {RentalComponent} from './components/rental/rental.component';
 import {LoadingComponent} from './components/loading/loading.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, CarFilterPipe, LoginComponent, RegisterComponent,
-    ContentComponent, BrandComponent, CarComponent, ColorComponent, CustomerComponent, RentalComponent, LoadingComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  declarations: [
+    AppComponent, NavComponent, CarFilterPipe, LoginComponent, RegisterComponent,
+    ContentComponent, BrandComponent, CarComponent, ColorComponent, CustomerComponent, RentalComponent, LoadingComponent, ChangePasswordComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
 })

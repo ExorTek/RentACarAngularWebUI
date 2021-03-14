@@ -11,7 +11,7 @@ export class RentalComponent implements OnInit {
 
   rentals: Rental[] = [];
   dataLoaded = false;
-
+  error = '';
   constructor(private rentalService: RentalService) {
   }
 
@@ -23,6 +23,8 @@ export class RentalComponent implements OnInit {
     this.rentalService.getRentals().subscribe(response => {
       this.rentals = response.data;
       this.dataLoaded = true;
+    },error=>{
+      this.error = error.name;
     })
   }
 }

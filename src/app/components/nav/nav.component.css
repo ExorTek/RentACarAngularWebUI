@@ -1,63 +1,78 @@
+* {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .navbar {
-  background-color: rgba(0, 0, 0,1.0);
+  background-color: rgba(0, 0, 0, 1.0);
   font-size: 1.2em;
 }
+
 .container {
   width: auto;
 }
-.logo img{
-  width: 160px;
+.logo img {
+  width: 200px;
   height: 90px;
   padding-top: 28px;
 }
-.icons{
-  width: 160px;
-  height: 90px;
+.menu ul li a {
+  font-size: 0.9em;
+
+  margin-left: 0.8em;
 }
-.icons ul{
-  list-style-type: none;
+.menu {
+  text-align: center;
+  text-transform: uppercase;
+
 }
-.icons ul li img{
-  width: 50px;
-  float: right;
-  padding-right: 20px;
-  padding-top: 28px;
+.menu * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
-.menu ul li a{
-  font-size: 1em;
-  color: #ebebeb !important;
-  padding-left: 0.7em;
+.menu li {
+  display: inline-block;
+  list-style: outside none none;
+
+  overflow: hidden;
 }
-.menu ul li a:hover{
-  color: #9b59b6 !important;
+.menu a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.menu a:before,
+.menu a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
-.menu ul li a:hover{
-  animation: shake 4s linear forwards;
-  font-size: 1.1em;
+.menu a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #8E44AD;
+}
+.menu a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
 }
 
-@keyframes shake {
-  5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
-    filter: blur(0.018em);
-    transform: translateY(0.018em) rotate(0deg);
-  }
-  10%, 30%, 40%, 50%, 70%, 80%, 90% {
-    filter: blur(0.01em);
-    transform: translateY(-0.018em) rotate(0deg);
-  }
-  20%, 60% {
-    filter: blur(0.03em);
-    transform: translate(-0.018em, 0.018em) rotate(0deg);
-  }
-  45%, 85% {
-    filter: blur(0.03em);
-    transform: translate(0.018em, -0.018em) rotate(0deg);
-  }
-  100% {
-    filter: blur(0.007em);
-    transform: translate(0) rotate(-0.5deg);
-  }
+.menu li:hover a,
+.menu .current a {
+  transform: translateY(100%);
 }
 
 

@@ -14,6 +14,7 @@ export class BrandComponent implements OnInit {
 
   brands: Brand[] = [];
   dataLoaded = false;
+  error = '';
 
   constructor(private brandService: BrandService) {
   }
@@ -26,6 +27,8 @@ export class BrandComponent implements OnInit {
     this.brandService.getBrands().subscribe(response => {
       this.brands = response.data;
       this.dataLoaded  = true;
+    }, error => {
+      this.error = error.name;
     })
   }
 }
