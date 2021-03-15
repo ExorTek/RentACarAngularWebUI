@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {BrandService} from "../../services/brand.service";
-import {Brand} from "../../models/entityModels/brand";
+import {BrandService} from '../../services/brand.service';
+import {Brand} from '../../models/entityModels/brand';
+
 declare var $: any;
-import { timer } from 'rxjs';
+import {timer} from 'rxjs';
 
 
 @Component({
@@ -23,12 +24,13 @@ export class BrandComponent implements OnInit {
     this.getBrands();
   }
 
+  // tslint:disable-next-line:typedef
   getBrands() {
     this.brandService.getBrands().subscribe(response => {
       this.brands = response.data;
-      this.dataLoaded  = true;
+      this.dataLoaded = true;
     }, error => {
       this.error = error.name;
-    })
+    });
   }
 }

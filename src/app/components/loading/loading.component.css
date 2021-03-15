@@ -1,70 +1,18 @@
-/*.box{*/
-/*  width: 200px;*/
-/*  height: 200px;*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*  overflow: hidden;*/
-/*}*/
-/*.box .b{*/
-/*  border-radius: 50%;*/
-/*  border-left: 4px solid;*/
-/*  border-right: 4px solid;*/
-/*  border-top: 4px solid transparent !important;*/
-/*  border-bottom: 4px solid transparent !important;*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*  animation: ro 2s infinite;*/
-/*}*/
-/*.box .b1{*/
-/*  border-color: #4a69bd;*/
-/*  width: 120px;*/
-/*  height: 120px;*/
-
-/*}*/
-/*.box .b2{*/
-/*  border-color: #f6b93b;*/
-/*  width: 100px;*/
-/*  height: 100px;*/
-/*  animation-delay: 0.2s;*/
-/*}*/
-/*.box .b3{*/
-/*  border-color: #2ecc71;*/
-/*  width: 80px;*/
-/*  height: 80px;*/
-/*  animation-delay: 0.4s;*/
-/*}*/
-
-/*.box .b4{*/
-/*  border-color: #34495e;*/
-/*  width: 60px;*/
-/*  height: 60px;*/
-/*  animation-delay: 0.6s;*/
-/*}*/
-/*@keyframes ro {*/
-/*  0%{*/
-/*    transform: translate(-50%, -50%) rotate(0deg);*/
-/*  }*/
-
-/*  50%{*/
-/*    transform: translate(-50%, -50%) rotate(-180deg);*/
-/*  }*/
-/*  100%{*/
-/*    transform: translate(-50%, -50%) rotate(0deg);*/
-/*  }*/
-/*}*/
+.con{
+  max-width: 1600px;
+  height: 20em;
+  margin-left: 50%;
+  padding-top: 6em;
+}
 h1 {
-  position: absolute;
+  position: static;
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
   left: 50%;
   top: 58%;
-  margin-left: -30px;
-  margin-top: 2%;
+  padding-right: 20px;
+  margin-left: -2em;
 }
 .res {
   width: 6em;
@@ -72,7 +20,8 @@ h1 {
   margin-top: -5em;
 }
 .body {
-  position: absolute;
+  width: 16em;
+  position: static;
   top: 50%;
   margin-left: -50px;
   left: 50%;
@@ -82,8 +31,8 @@ h1 {
   height: 5px;
   width: 35px;
   position: absolute;
-  top: -19px;
   left: 60px;
+  padding-top: -40px;
   border-radius: 2px 10px 1px 0;
 }
 .base span {
@@ -140,41 +89,37 @@ h1 {
   animation: fazer4 1s linear infinite;
   animation-delay: -1s;
 }
-@keyframes fazer1 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -80px;
-    opacity: 0;
-  }
+
+.longfazers {
+  position: static;
+  width: 100%;
+  height: 100%;
 }
-@keyframes fazer2 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100px;
-    opacity: 0;
-  }
+.longfazers span {
+
+  position: absolute;
+  height: 2px;
+  width: 20%;
+  background: #000;
 }
-@keyframes fazer3 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -50px;
-    opacity: 0;
-  }
+.longfazers span:nth-child(1) {
+  top: 20%;
+  animation: lf 0.6s linear infinite;
+  animation-delay: -5s;
 }
-@keyframes fazer4 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -150px;
-    opacity: 0;
-  }
+.longfazers span:nth-child(2) {
+  top: 40%;
+  animation: lf2 0.8s linear infinite;
+  animation-delay: -1s;
+}
+.longfazers span:nth-child(3) {
+  top: 60%;
+  animation: lf3 0.6s linear infinite;
+}
+.longfazers span:nth-child(4) {
+  top: 80%;
+  animation: lf4 0.5s linear infinite;
+  animation-delay: -3s;
 }
 @keyframes speeder {
   0% {
@@ -210,36 +155,6 @@ h1 {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
-}
-.longfazers {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.longfazers span {
-  position: absolute;
-  height: 2px;
-  width: 20%;
-  background: #000;
-}
-.longfazers span:nth-child(1) {
-  top: 20%;
-  animation: lf 0.6s linear infinite;
-  animation-delay: -5s;
-}
-.longfazers span:nth-child(2) {
-  top: 40%;
-  animation: lf2 0.8s linear infinite;
-  animation-delay: -1s;
-}
-.longfazers span:nth-child(3) {
-  top: 60%;
-  animation: lf3 0.6s linear infinite;
-}
-.longfazers span:nth-child(4) {
-  top: 80%;
-  animation: lf4 0.5s linear infinite;
-  animation-delay: -3s;
 }
 @keyframes lf {
   0% {
@@ -277,6 +192,42 @@ h1 {
   }
   100% {
     left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
     opacity: 0;
   }
 }

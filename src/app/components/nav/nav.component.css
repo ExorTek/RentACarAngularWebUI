@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 1.0);
+  background-color: rgb(0, 0, 0);
   font-size: 1.2em;
 }
 
@@ -17,13 +17,11 @@
 }
 .menu ul li a {
   font-size: 0.9em;
-
   margin-left: 0.8em;
 }
 .menu {
   text-align: center;
   text-transform: uppercase;
-
 }
 .menu * {
   box-sizing: border-box;
@@ -33,7 +31,6 @@
 .menu li {
   display: inline-block;
   list-style: outside none none;
-
   overflow: hidden;
 }
 .menu a {
@@ -75,11 +72,31 @@
   transform: translateY(100%);
 }
 
-
-
-
-
-
+.icons{
+  width: 250px;
+  height: 90px;
+}
+.icons ul{
+  list-style-type: none;
+}
+.userIcon{
+  padding-right: 0.3em;
+}
+.instagramIcon{
+  margin-right: 1em;
+}
+.githubIcon{
+  margin-right: 0.5em;
+}
+.userIcon{
+  margin-right: 1em;
+}
+fa-icon{
+  position:relative;
+  float: right;
+  padding-top: 18px;
+  color: #ebebeb;
+}
 
 
 

@@ -1,37 +1,48 @@
-<div *ngIf="dataLoaded==false || cars.length <= 0 ">
-  <app-loading></app-loading>
-</div>
-
-<div *ngIf="dataLoaded==true && cars.length <= 0" class="alert alert-danger alert-dismissible" role="alert" id="myAlert">
-  <strong>Başarısız</strong> Şuanda Araç Bulunamadı
-</div>
 
 <div *ngIf="error === 'HttpErrorResponse'" class="alert alert-danger alert-dismissible" role="alert">
   <strong>OOOPS!</strong> Bağlantı Hatası!
 </div>
 
-<div *ngIf="dataLoaded==true && cars.length > 0" class="container">
-  <table class="table table-info">
-    <thead>
-    <tr>
-      <th scope="col">Araba ID</th>
-      <th scope="col">Marka Adı</th>
-      <th scope="col">Renk Adı</th>
-      <th scope="col">Model Yılı</th>
-      <th scope="col">Günlük Fiyat</th>
-      <th scope="col">Açıklama</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr (click)="setCurrentCar(car)" [class]="getCurrentCarClass(car)"
-        routerLink="/cars/details/{{car.id}}" *ngFor="let car of cars">
-      <td>{{car.id}}</td>
-      <td>{{car.brandName}}</td>
-      <td>{{car.colorName}}</td>
-      <td>{{car.modelYear}}</td>
-      <td>{{car.dailyPrice}}</td>
-      <td>{{car.description}}</td>
-    </tr>
-    </tbody>
-  </table>
+
+<div *ngIf="dataLoaded==true && cars.length <= 0" class="alert alert-danger alert-dismissible" role="alert" id="myAlert">
+  <strong>Başarısız</strong> Şuanda Renk Bulunamadı
+</div>
+
+
+<div *ngIf="dataLoaded==true && cars.length > 0" class="row">
+    <div class="col-md-3">
+      <ul class="snip1189">
+        <li  (click)="getBrands()"> <a routerLink="/cars">Tüm Arabalar</a></li> <hr>
+        <li> <a (click)="setCurrentCar(brand)" routerLink="/cars/detailsbybrandid/{{brand.brandId}}"
+                 *ngFor="let brand of brands">{{brand.brandName}}</a></li>
+
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <table class="table table-info">
+        <thead>
+        <tr>
+          <th scope="col">Marka Adı</th>
+          <th scope="col">Renk Adı</th>
+          <th scope="col">Model Yılı</th>
+          <th scope="col">Günlük Fiyat</th>
+          <th scope="col">Açıklama</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of cars">
+              <td>{{car.brandName}}</td>
+              <td>{{car.colorName}}</td>
+              <td>{{car.modelYear}}</td>
+              <td>{{car.dailyPrice}}</td>
+              <td>{{car.description}}</td>
+              <td routerLink="/car/detailsbyid/{{car.id}}">Detay</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<div *ngIf="dataLoaded==false || cars.length <= 0">
+  <app-loading></app-loading>
 </div>
